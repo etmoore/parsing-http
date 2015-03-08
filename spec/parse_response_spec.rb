@@ -29,4 +29,11 @@ RSpec.describe Request do
     end
   end
 
+  describe 'body' do
+    it 'returns a string containing the request body' do
+      req_body = 'first_name=Alex&last_name=Andrews&email=some@email.com&password=secure'
+      expect(@request.body).to eq(req_body)
+    end
+  end
+
 end
