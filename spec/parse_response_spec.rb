@@ -58,4 +58,10 @@ RSpec.describe Request do
     end
   end
 
+  describe 'version' do
+    it 'returns HTTP version string' do
+      expect(@request.version).to eq('HTTP/1.1')
+    end
+  end
+
 end
