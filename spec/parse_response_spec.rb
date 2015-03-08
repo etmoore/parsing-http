@@ -36,4 +36,11 @@ RSpec.describe Request do
     end
   end
 
+  describe 'querystring' do
+    it 'returns the request query string' do
+      req_q_string = 'query=42&sort=desc&find=name'
+      expect(@request.querystring).to eq(req_q_string)
+    end
+  end
+
 end
