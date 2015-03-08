@@ -43,4 +43,19 @@ RSpec.describe Request do
     end
   end
 
+  describe 'params' do
+    it 'returns a hash containing the request params' do
+      req_params = {
+        'query' => '42',
+        'sort' => 'desc',
+        'find' => 'name',
+        'first_name' => 'Alex',
+        'last_name' => 'Andrews',
+        'email' => 'some@email.com',
+        'password' => 'secure'
+      }
+      expect(@request.params).to eq(req_params)
+    end
+  end
+
 end
