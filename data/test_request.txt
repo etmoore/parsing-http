@@ -1,6 +1,6 @@
 POST /news/031415?query=42&sort=desc&find=name HTTP/1.1
 Host: yahoo.com
 Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
+Content-Type: application/x-www-form-url-urlencoded
 
 first_name=Alex&last_name=Andrews&email=some@email.com&password=secure

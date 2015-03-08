@@ -3,7 +3,7 @@ require_relative '../lib/parse_response'
 
 RSpec.describe Request do
   before do
-    req = File.read('../data/test_request.txt')
+    req = File.read('data/test_request.txt')
     @request = Request.new(req)
   end
 
@@ -21,11 +21,11 @@ RSpec.describe Request do
 
   describe 'headers' do
     it 'returns a hash of the headers' do
-      # expect(@require.header).to match(
-      #  "Host" => "localhost:3000"
-      #  "Cache-Control" => "no-cache"
-      #  "Content-Type" => "application/x-www-form-url-urlencoded"
-      #  )
+      expect(@request.headers).to eq({
+       "Host" => "yahoo.com",
+       "Cache-Control" => "no-cache",
+       "Content-Type" => "application/x-www-form-url-urlencoded"
+      })
     end
   end
 
